@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 leviDiv">
+            <h3>Categories</h3>
+            <ul>
+                <li class="ctg" (click)="filterLiving()">Living room</li>
+                <li class="ctg" (click)="filterBedroom()">Bedroom</li>
+                <li class="ctg" (click)="filterKitchen()">Kitchen</li>
+                <li class="ctg" (click)="filterBathroom()">Bathroom</li>
+            </ul>
+        </div>
+        <div class="col-md-9 desniDiv">
+            <div class="col-md-3" *ngFor="let proizvod of proizvodi" [productItem]="proizvod">
+                <a [routerLink]="['/shop/proizvod/',  proizvod.id ]">
+                    <div class="slika">
+                        <img [src]="proizvod.imageUrl">
+                    </div>
+                </a>
+                <div>
+                    <p>{{proizvod.name}}</p>
+                    <p>RSD {{proizvod.price}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

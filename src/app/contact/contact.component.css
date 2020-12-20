@@ -1,0 +1,15 @@
+input, textarea {
+    outline: 0;
+    border-width: 0 0 2px;
+}
+button {
+    display: block;
+    border: none;
+    margin: 2em auto;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+textarea.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row row2">
+        <div class="folder1 col-md-8">
+            <div class="slika">
+                <img [src]='jedanProizvod?.imageUrl' width="60%">
+            </div>
+        </div>
+        <div class="folder col-md-4">
+            <p class="naslov">{{jedanProizvod?.name}}</p>
+            <p class="cena">RSD {{jedanProizvod?.price}}</p>
+            <p>{{jedanProizvod?.opis}}</p>
+
+            <label for="kolicina">Quantity</label><br>
+            <input [(ngModel)]="kolicina.value" name="value" style="width: 50px;" id="kolicina" type="number" value="1"
+                min="1" max="5"><br><br>
+            <p id="dugme" (click)="addToCart(jedanProizvod)">Add to cart</p>
+        </div>
+    </div>
+</div>

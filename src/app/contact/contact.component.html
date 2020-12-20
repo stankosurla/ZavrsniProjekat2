@@ -1,0 +1,90 @@
+<div class="container my-4">
+    <div class="row">
+
+        <div class="col-md-4 my-2">
+            <h6>Fortisi Home Design</h6>
+            <br>
+            <p>
+                A: Laze Nancica 7, 21000 Novi Sad
+            </p>
+            <p>
+                T: 021/422-022
+            </p>
+            <p>
+                E: office@smartinit.net
+            </p>
+            <br>
+            <p>
+                MON-FRI: 7am-10pm
+            </p>
+            <p>
+                SATURDAY: 8am-10pm
+            </p>
+            <p>
+                SUNDAY: 8am- 11pm
+            </p>
+            <br>
+            <p>FAQ /</p>
+            <p>Shipping & Returns /</p>
+            <p>Store policy /</p>
+            <p>Payment Methods /</p>
+        </div>
+        <div class="col-md-8 my-4">
+            <form (ngSubmit)="onPosalji(f)" #f="ngForm">
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <div class="md-form form-group mb-4">
+                            <input type="text" class="form-control" ngModel required placeholder="Name"
+                                aria-label="Name" aria-describedby="material-addon1" id="name" name="name"
+                                #name="ngModel">
+                            <span class="help-block" *ngIf="name.touched && name.errors?.required">Obavezno polje</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="md-form form-group mb-4">
+                            <input type="email" class="form-control" ngModel required email placeholder="Email"
+                                aria-label="Email" aria-describedby="material-addon2" id="imejl" name="imejl"
+                                #imejl="ngModel">
+                            <span class="help-block" *ngIf="!imejl.valid && imejl.touched">Obavezno email polje</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="md-form form-group mb-4">
+                            <input type="text" class="form-control" ngModel required placeholder="Subject"
+                                aria-label="Subject" aria-describedby="material-addon3" id="subject" name="subject"
+                                #subject="ngModel">
+                            <span class="help-block" *ngIf="subject.touched && subject.errors?.required">Obavezno
+                                polje</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="md-form form-group">
+                            <textarea class="md-textarea form-control" ngModel required placeholder="Message"
+                                aria-label="With textarea" id="area" name="area" #area="ngModel"></textarea>
+                            <span class="help-block" *ngIf="area.touched && area.errors?.required">Obavezno polje</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-dark" [disabled]="!f.valid">Send</button>
+            </form>
+            <label>Get our newsletters</label><br>
+            <div class="row">
+                <div class="col-6">
+                    <input style="border: 2px solid gray; width: 100%;" display="inline-block" type="email" name="mejl"
+                        id="mejl" placeholder="Enter your email here" #input />
+                </div>
+                <div class="col-6" (click)="onClick(input.value)">
+                    <input display="inline-block" vertical-align="top" type="submit" value="Subscribe now"
+                        style="color: white; background-color: black; padding: 2px 6px; font-size: 0.9em;" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+<app-footer></app-footer> -->

@@ -1,0 +1,23 @@
+
+.about {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    padding-bottom: 0.5em;
+}
+
+.aboutImg {
+    text-align: center;
+}
+img {
+    width: 80%;
+    position: relative;
+    bottom: 0;
+}
+h4 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+p {
+    padding: 0.3em;
+}

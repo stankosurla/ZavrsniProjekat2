@@ -1,0 +1,16 @@
+.nav-link {
+    font-size: 0.9em;
+}
+.navbar-brand img {
+    height: 2rem;
+} 
+nav-link:hover,
+nav-link.active {
+    color: black;
+}
+.navbar-nav {
+    margin: auto;
+}
+.navbar {
+    border-bottom: 4px solid darkgray;
+}

@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center my-4">
+            <h3>Product Order Form</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xs-offset-3"></div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" id="contact-form" class="form">
+                <div class="form-group">
+                    <label class="form-label" for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" formControlName="fname">
+                    <span *ngIf="!signupForm.get('fname').valid && signupForm.get('fname').touched">Unesite ime!</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" formControlName="lname">
+                    <span *ngIf="!signupForm.get('lname').valid && signupForm.get('lname').touched">Unesite
+                        prezime!</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" formControlName="email">
+                    <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">Unesite
+                        email!</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone number</label>
+                    <input type="tel" class="form-control" id="phone" formControlName="phone">
+                    <span *ngIf="!signupForm.get('phone').valid && signupForm.get('phone').touched">Unesite
+                        telefon!</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="adress">Adress</label>
+                    <input type="text" class="form-control" id="adress" formControlName="adress">
+                    <span *ngIf="!signupForm.get('adress').valid && signupForm.get('adress').touched">Unesite
+                        adresu!</span>
+                </div>
+                <div class="radio">
+                    <label class="form-label" for="radio"><span style="font-size:1.5em">Payment method</span></label>
+                    <hr>
+                    <label class="form-label" for="lname">Select an option</label>
+                    <div class="custom-control custom-radio">
+                        <input formControlName="method" type="radio" class="custom-control-input" id="first" checked
+                            mdbInput value="Credit Card">
+                        <label class="custom-control-label" for="first">Credit Card</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input formControlName="method" value="PayPal" type="radio" class="custom-control-input"
+                            id="second" mdbInput>
+                        <label class="form-label" class="custom-control-label" for="second">PayPal</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input formControlName="method" value="Payment on Delivery" type="radio"
+                            class="custom-control-input" id="third" mdbInput>
+                        <label class="custom-control-label" for="third">Payment on Delivery</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="dropdown">How did you hear about us?</label>
+                    <select formControlName="options" class="browser-default custom-select mb-4">
+                        <option value="" disabled>Choose option</option>
+                        <option value="1" selected>Kako ste culi za nas?</option>
+                        <option value="2">Preko drustvenih mreza</option>
+                        <option value="3">Preko oglasa</option>
+                        <option value="4">Od prijatelja</option>
+                    </select>
+                    <span *ngIf="!signupForm.get('options').valid && signupForm.get('options').touched">Izaberite
+                        opciju!</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">Comments</label>
+                    <textarea rows="5" cols="50" formControlName="message" class="form-control" id="message"
+                        tabindex="4" required></textarea>
+                    <span *ngIf="!signupForm.get('message').valid && signupForm.get('message').touched">Unesite
+                        poruku!</span>
+                </div>
+                <div class="text-center">
+                    <button [disabled]="!signupForm.valid" id="btn" type="submit"
+                        class="btn btn-start-order">Confirm</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xs-offset-3"></div>
+    </div>
+</div>

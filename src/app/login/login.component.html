@@ -1,0 +1,21 @@
+<div class="bckgd">
+    <a [routerLink]="['/home']" class="close">&times;</a>
+    <div class="abs">
+        <div class="forma">
+            <h2>Log in</h2>
+            <p><small>New to this site? <a [routerLink]="['/signup']">Sign up</a></small></p>
+            <form (ngSubmit)="logIn(f)" #f="ngForm">
+                <input type="email" placeholder="Email" name="email" ngModel class="form-control"> <br>
+                <input type="password" placeholder="Password" name="password" ngModel class="form-control">
+                <a href="#">
+                    <p><em>Forgot password? </em></p>
+                </a>
+                <div (click)="onClick()">
+                    <button type="submit" id="dugme" name="dugme">Log In</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>

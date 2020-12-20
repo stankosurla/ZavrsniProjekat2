@@ -1,0 +1,76 @@
+
+
+.bckgd {
+    position: fixed;
+    background-image: url(../images/signupPattern.jpg);
+    background-color: rgb(240, 235, 228);
+    width: 100%;
+    height: 150vh;
+    margin-bottom: 5em;
+    overflow-x: hidden; 
+}
+.abs {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 20%;
+    bottom: 10%;
+}
+.forma {
+    position: relative;
+    
+    width: 25%;
+    margin: 0 auto;
+    background-color:rgb(245, 244, 244);
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    background-color: rgb(245, 244, 244);
+    border-radius: 50%;
+    padding: 0.5em 0.6em;
+    opacity: 1;
+    font-size: 1.5em;
+}
+
+input {
+    border-style: none;
+    background-color:rgb(245, 244, 244);
+    border-bottom: 1px solid black;
+    margin: 1em 0;
+}
+
+#dugme {
+    width: 50%;
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: black;
+}
+
+@media(max-width: 1144px){
+    #dugme {
+        width: 60%;
+    }
+}
+
+@media (max-width: 978px){
+    .forma {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px){
+    .forma {
+        width: 40%;
+    }
+    #dugme {
+        width: 80%;
+    }
+}

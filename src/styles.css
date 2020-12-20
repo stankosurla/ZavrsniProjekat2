@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.icon-bar {
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 3px;
+  color: black;
+  font-size: 20px;
+  background-color: white;
+}
+.fortisi {
+    background-image: url(../src/app/images/livingRoom.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#fortisirow {
+    text-align: center;
+    margin: auto;
+    padding: 2em;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+iframe {
+    display: block;
+}
+h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+button {
+    padding: 0.5em 1.5em;
+    border-radius: 0;
+}
+
+@media (max-width: 960px){
+    #fortisirow {
+        width: 100%;
+    }
+}
